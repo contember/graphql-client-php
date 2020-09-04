@@ -1,0 +1,25 @@
+{
+    "name": "contember/graphql-client",
+    "description": "GraphQL client for Contember",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "David Matejka",
+            "email": "matej21@matej21.cz"
+        }
+    ],
+    "require": {
+        "guzzlehttp/promises": "^1.3",
+        "webonyx/graphql-php": "^14.3",
+        "psr/http-message": "^1.0",
+        "psr/log": "^1.1"
+    },
+    "require-dev": {
+        "roave/security-advisories": "@dev",
+        "guzzlehttp/guzzle": "^7.0",
+        "nette/caching": "^3.0",
+        "tracy/tracy": "^2.7",
+        "phpstan/phpstan": "^0.12.42"
+    }
+}

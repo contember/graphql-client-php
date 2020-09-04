@@ -1,0 +1,9 @@
+parameters:
+	level: max
+	paths: ['src']
+
+	checkMissingIterableValueType: false
+	ignoreErrors:
+		-
+			path: src/Drivers/FieldCacheQueryDriver.php
+			message: '~Parameter \#1 \$vars of class GraphQL\\Language\\AST\\SelectionSetNode constructor expects.+~'

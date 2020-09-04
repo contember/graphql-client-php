@@ -1,0 +1,63 @@
+<?php
+
+?>
+<style class="tracy-debug">
+	#tracy-debug .graphql-panel-sql {
+		background: white !important;
+	}
+
+	#tracy-debug .graphql-panel-sql > span, #tracy-debug .graphql-panel-sql > span > a {
+		color: #777 !important;
+	}
+
+	#tracy-debug .graphql-panel-sql > span > a:hover {
+		color: #fff !important;
+	}
+
+	#tracy-debug .graphql-panel-sql > span {
+		margin-right: 1em !important;
+	}
+
+	#tracy-debug .graphql-panel-sql .whitespace-explain {
+		white-space: pre;
+	!important;
+	}
+
+	#tracy-debug .graphql-panel-time {
+		text-align: right !important;
+		white-space: nowrap !important;
+		max-width: 70px !important;
+	}
+</style>
+
+<h1>Queries: <?php echo $count ?></h1>
+<div class="tracy-inner graphql-panel">
+	<table>
+		<tr>
+			<th class="graphql-panel-time">ms</th>
+			<th>SQL query</th>
+		</tr>
+		<?php
+		foreach ($queries as $query):
+			?>
+			<tr>
+				<td class="graphql-panel-time"><?php echo $query->elapsed ? sprintf('%0.2f', $query->elapsed) : '' ?></td>
+				<td class="graphql-panel-sql">
+                    <?php if ($query->path ?? []): ?>
+                        <h3><?php echo implode(' > ', $query->path) ?></h3>
+                    <?php endif; ?>
+					<div style="font-family: monospace;white-space: pre-wrap"><?php echo $query->sql ?></div>
+					<?php if ($query->bindings): ?>
+						<table style="margin-top: 10px">
+							<?php foreach ($query->bindings as $binding): ?>
+								<tr>
+									<td><?php echo self::dump($binding) ?></td>
+								</tr>
+							<?php endforeach; ?>
+						</table>
+					<?php endif; ?>
+				</td>
+			</tr>
+		<?php endforeach ?>
+	</table>
+</div>
