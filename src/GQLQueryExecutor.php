@@ -51,7 +51,7 @@ class GQLQueryExecutor
 						'result' => $result,
 					]);
 				}
-				return $result;
+				return $result->data;
 			});
 	}
 

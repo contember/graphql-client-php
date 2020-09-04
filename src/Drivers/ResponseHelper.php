@@ -20,7 +20,7 @@ class ResponseHelper
 		$result = Json::decode($data);
 		self::throwExceptionFromErrorInResponse($response, $result);
 
-		return new QueryResult(new \DateTimeImmutable(), $result->data, $response->getHeaders(), QueryResult::STATUS_OK);
+		return new QueryResult(new \DateTimeImmutable(), $result, $response->getHeaders(), QueryResult::STATUS_OK);
 	}
 
 
