@@ -3,6 +3,7 @@
 namespace Contember\GraphQL\Bridges\Tracy;
 
 use Contember\GraphQL\Drivers\GQLQueryDriver;
+use Contember\GraphQL\QueryResult;
 use GuzzleHttp\Promise\PromiseInterface;
 use Tracy\Debugger;
 use Tracy\Dumper;
