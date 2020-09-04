@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace Nextras\Dbal\Bridges\NetteTracy;
+namespace Contember\GraphQL\Bridges\Tracy;
 
 use Contember\GraphQL\GQLQueryExecutor;
 use Tracy\Debugger;

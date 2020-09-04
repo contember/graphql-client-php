@@ -26,5 +26,10 @@
     "suggest": {
         "guzzlehttp/guzzle": "Execution driver",
         "nette/caching": "Query caching"
+    },
+    "autoload": {
+        "psr-4": {
+            "Contember\\GraphQL\\": "src"
+        }
     }
 }

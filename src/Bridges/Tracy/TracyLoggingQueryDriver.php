@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace Contember\GraphQL;
+namespace Contember\GraphQL\Bridges\Tracy;
 
 use Contember\GraphQL\Drivers\GQLQueryDriver;
 use GuzzleHttp\Promise\PromiseInterface;
