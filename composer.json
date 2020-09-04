@@ -22,5 +22,9 @@
         "nette/caching": "^3.0",
         "tracy/tracy": "^2.7",
         "phpstan/phpstan": "^0.12.42"
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "Execution driver",
+        "nette/caching": "Query caching"
     }
 }
